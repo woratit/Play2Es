@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlayTwoEs.MusicList"
+             Title="PlayList">
+
+  <ContentPage.Padding>
+    <OnPlatform
+			x:TypeArguments="Thickness"
+			iOS="10,20,10,10"
+			Android="10,10,10,10" />
+  </ContentPage.Padding>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <!--<ColumnDefinition Width="Auto" />-->
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Button x:Name="btnResize"
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalOptions="End"
+            VerticalOptions="Center" Text="aA" />
+
+    <Label Text="Playlists" FontSize="Medium" TextColor="Blue"
+           Grid.Row="1" Grid.Column="0"
+           VerticalOptions="Center" />
+
+    <StackLayout BackgroundColor="Black" Orientation="Vertical" Grid.Row="2" Grid.Column="0">
+      <!--<StackLayout Orientation="Horizontal">-->
+      <Label Text="เพลงที่ 1"
+            HorizontalOptions="StartAndExpand"
+            TextColor="White" FontSize="Medium" />
+
+      <Label Text="เพลงที่ 2"
+            HorizontalOptions="StartAndExpand"
+            TextColor="White" FontSize="Medium" />
+
+      <!--</StackLayout>-->
+
+    </StackLayout>
+
+    <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="0">
+      <Button Text="Play" />
+
+      <Button Text="Back" />
+
+      <Button />
+
+      <Button />
+      
+    </StackLayout>
+
+    <!--<ListView x:Name="listView_Songs" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout BackgroundColor="Black" Orientation="Vertical">
+              <Label Text="เพลงที่ 1"
+              HorizontalOptions="EndAndExpand"
+              TextColor="White" FontSize="Medium" />
+
+              <Label Text="เพลงที่ 2"
+              HorizontalOptions="EndAndExpand"
+              TextColor="White" FontSize="Medium" />
+
+              <Label Text="เพลงที่ 3"
+              HorizontalOptions="EndAndExpand"
+              TextColor="White" FontSize="Medium" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>-->
+
+  </Grid>
+
+</ContentPage>
